@@ -12,4 +12,8 @@ pkgs.mkShellNoCC {
     clippy
     gcc_multi
   ];
+
+  shellHook = ''
+    export RUST_BACKTRACE=1
+  '';
 }
