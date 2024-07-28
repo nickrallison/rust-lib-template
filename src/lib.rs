@@ -1,6 +1,15 @@
+#![deny(
+    clippy::all,
+    clippy::restriction,
+    clippy::pedantic,
+    clippy::nursery,
+    clippy::cargo
+)]
+
 mod error;
 mod prelude;
 
+#[allow(unused_imports)]
 use crate::prelude::*;
 
 pub fn add(left: usize, right: usize) -> usize {

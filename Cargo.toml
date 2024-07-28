@@ -5,3 +5,7 @@ edition = "2021"
 
 [dependencies]
 thiserror = "1.0.63"
+
+[[bin]]
+name = "template"
+path = "src/main.rs" # replace bin.rs with name of your file
