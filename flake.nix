@@ -20,5 +20,23 @@
         export RUST_LOG=trace
       '';
     };
+
+    devShell.aarch64-darwin = with nixpkgs.legacyPackages.aarch64-darwin; mkShellNoCC {
+      packages = with pkgs; [
+        rustc
+        rustup 
+        cargo
+        rustfmt
+        rust-analyzer
+        clippy
+      ];
+    };
+
+    shellHook = ''
+      export RUST_BACKTRACE=1
+      export RUST_LOG=trace
+    '';
+
   };
 }
+
