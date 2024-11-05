@@ -1,3 +1,4 @@
+
 [package]
 name = "template"
 version = "0.1.0"
@@ -10,11 +11,8 @@ const_panic = "0.2.10"
 env_logger = "0.11.5"
 log = "0.4.22"
 rayon = "1.10.0"
+rstest = "0.23.0"
 thiserror = "1.0.68"
-
-[[bin]]
-name = "template"
-path = "src/main.rs" # replace bin.rs with name of your file
 
 [lints.rust]
 unsafe_code = "forbid"
@@ -24,3 +22,10 @@ enum_glob_use = "deny"
 pedantic = "deny"
 nursery = "deny"
 unwrap_used = "deny"
+
+[profile.release]
+opt-level = 'z'   # Optimize for size.
+lto = true        # Enable Link Time Optimisation
+codegen-units = 1 # Reduced to increase optimisations.
+panic = 'abort'   # Abort on panic
+strip = "symbols" # Strip symbols from binary
