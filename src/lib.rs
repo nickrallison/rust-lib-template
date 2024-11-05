@@ -13,6 +13,7 @@
 mod error;
 mod prelude;
 
+#[allow(unused_imports)]
 use crate::prelude::*;
 
 #[must_use] pub const fn add(left: usize, right: usize) -> usize {
