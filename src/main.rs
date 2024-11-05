@@ -11,6 +11,7 @@ use log::{info, trace, warn};
 use std::path::PathBuf;
 
 fn main() -> Result<()> {
+    color_eyre::install()?;
     env_logger::init();
     let path: PathBuf = crate::args::Args::get_args();
     println!("path recieved as argument: {}", path.display());
