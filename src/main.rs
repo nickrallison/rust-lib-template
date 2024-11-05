@@ -1,20 +1,11 @@
-#![deny(
-    clippy::all,
-    clippy::restriction,
-    clippy::pedantic,
-    clippy::nursery,
-    clippy::cargo
-)]
 
 mod args;
 mod error;
 mod prelude;
 
-#[allow(unused_imports)]
 use crate::prelude::*;
 
 use env_logger;
-#[allow(unused_imports)]
 use log::{info, trace, warn};
 
 use std::path::PathBuf;

@@ -12,6 +12,7 @@
         rustfmt
         rust-analyzer
         clippy
+        bacon
         gcc_multi
       ];
 
@@ -29,6 +30,7 @@
         rustfmt
         rust-analyzer
         clippy
+        bacon
       ];
     };
 

@@ -4,11 +4,23 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-clap = { version = "4.5.11", features = ["derive"] }
+clap = { version = "4.5.20", features = ["derive"] }
+color-eyre = "0.6.3"
+const_panic = "0.2.10"
 env_logger = "0.11.5"
 log = "0.4.22"
-thiserror = "1.0.63"
+rayon = "1.10.0"
+thiserror = "1.0.68"
 
 [[bin]]
 name = "template"
 path = "src/main.rs" # replace bin.rs with name of your file
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+enum_glob_use = "deny"
+pedantic = "deny"
+nursery = "deny"
+unwrap_used = "deny"
